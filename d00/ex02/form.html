@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var inputs = (function getVal() {
+            var nodeList = document.querySelectorAll('input');
+            var values = [];
+            for (let index = 0; index < nodeList.length; index++) {
+                const element = nodeList[index];
+                var obj = {};
+                if (element.type === 'radio') {
+                    if (element.checked === true) {
+                        obj[element.name] = element.value;
+                        values.push(obj);
+                    }
+                } else {
+                    obj[element.name] = element.value;
+                    values.push(obj);
+                }
+            }
+            return (values)
+        })();
+        // document.querySelector('.js-button').addEventListener("onclick", displayFormContents())
+    </script>
+    <script type="text/javascript" src="popup.js"></script>
+</head>
+<body>
+    <form action="#">
+        <label>Firstname</label>
+        <input type="text" name="Firstname" id="firstname"><br>
+        <label>Name</label>
+        <input type="text" name="Name" id="name"><br>
+        <label>Age</label>
+        <input type="tel" name="Age" id="age"><br>
+        <label>Phone</label>
+        <input type="tel" name="Phone" id="phone"><br>
+        <label>Email</label>
+        <input type="email" name="Email" id="email"><br>
+        <label>Student at 42</label>
+        <input type="checkbox" name="Student" id="student"><br>
+        <label>Gender</label><br>
+        <label>Male</label>
+        <input type="radio" name="Gender" value="Male" id="gender_male">
+        <label>Female</label>
+        <input type="radio" name="Gender" value="Female" id="gender_female">
+        <label>Other</label>
+        <input type="radio" name="Gender" value="Other" id="gender_other"><br>
+        <button class="js-button" type="submit" onclick="displayFormContents();">oui</button>
+    </form>
+</body>
+</html>
