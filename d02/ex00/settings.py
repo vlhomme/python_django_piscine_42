@@ -1,0 +1,5 @@
+title = "CV"
+firstname = "Théo"
+name = "Goldo"
+age = "42"
+profession = "garbage man"

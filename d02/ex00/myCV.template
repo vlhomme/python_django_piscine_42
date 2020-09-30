@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <style>
+        table {
+            border: solid;
+            border-collapse: collapse;
+        }
+        th {
+            border: solid
+        }
+        td{
+            border: solid
+        }
+    </style>
+</head>
+<body>
+    <h1>Mon CV</h1>
+    <p>
+        Nom: {name}<br>
+        Prenom: {firstname}<br>
+        Age: {age}<br>
+        Profession: {profession}<br>
+    </p>
+    <table>
+        <tr>
+            <th>
+            langues    
+            </th>
+            <th>
+            competences
+            </th>
+        </tr>
+        <tr>
+            <td>
+                anglais
+            </td>
+            <td>
+                pypython
+            </td>
+        </tr>
+        <tr>
+            <td>
+                allemand
+            </td>
+            <td style="border: solid #424242;">
+                ruby
+            </td>
+        </tr>
+    </table>
+    <h4>Mon Parcours</h4>
+    <ol>
+        <li>maternelle</li>
+        <li>42</li>
+        <li>trabajo</li>
+    </ol>
+    <h4>Je connais plusieurs manieres de dire oui</h4>
+    <ul>
+        <li>Oui</li>
+        <li>si</li>
+        <li>yes</li>
+    </ul>
+</body>
+</html>
