@@ -53,12 +53,12 @@ def count_links(request):
     while (not '/wiki/Philosophy' in pages_seen):
         if (len(pages_seen) == len(set(pages_seen))):
             count += 1
-            # print(pages_seen[-1]) # this line is to see each visited page as they come
+            print(pages_seen[-1].replace('/wiki/', '').replace('_', ' ')) # this line is to see each visited page as they come
             pages_seen.append(get_next(pages_seen[-1]))
         else:
             print('It leads to an infinite loop !')
             exit(1)
-    print(count)
+    print('{} roads from {} to philosophy !'.format(count, request.replace('/wiki/', '').replace('_', ' ')))
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
