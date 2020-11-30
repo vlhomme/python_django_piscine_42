@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% block title %}Ex01 : Processus d'affichage d'une page statique.{% endblock %}
+{% block content %}
+{% include "nav.html" %}
+<h1>Processus d'affichage d'une page statique.</h1>
+<p>
+    <p>Le diagramme ci-dessous est important à comprendre car il est au cœur du fonctionnement du cadriciel Django. Il décrit les flux de données et les composants sollicités pour traiter et répondre à une requête HTTP. Nous allons désormais nous atteler à :</p>
+
+<ul>
+ <li>détailler le routage des URL pour associer les vues adaptées aux requêtes HTTP que le site devra traiter (y compris avec des informations encodées dans les URL).</li>
+ <li>définir les fonctions de visualisation et créer les pages HTML qui vont permettre de publier les informations à destination des utilisateurs du site.</li>
+ <li>créer les gabarits qui vont permettre de publier les données dans les vues.</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="display: block; margin: 0px auto;width: 100%;"></p>
+
+</p>
+{% endblock %}

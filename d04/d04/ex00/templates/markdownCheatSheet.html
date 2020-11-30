@@ -1,0 +1,1000 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr-FR"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="">
+
+	<title>Ex00 : Markdown Cheatsheet</title>
+<link rel="alternate" type="application/rss+xml" title="Cheat Sheet » Flux" href="https://www.cheatsheet.fr/feed/">
+<link rel="alternate" type="application/rss+xml" title="Cheat Sheet » Flux des commentaires" href="https://www.cheatsheet.fr/comments/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.cheatsheet.fr\/lib\/js\/wp-emoji-release.min.js"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="{% static 'css/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+
+	<link rel="stylesheet" id="wp-block-library-css" href="{% static 'css/style_003.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="wp-ulike-css" href="{% static 'css/wp-ulike.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="{% static 'css/bootstrap.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="{% static 'css/font-awesome.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="shapely-fonts-css" href="{% static 'css/css_003.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="flexslider-css" href="{% static 'css/flexslider.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="shapely-style-css" href="{% static 'css/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="owl.carousel-css" href="{% static 'css/owl_002.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="owl.carousel.theme-css" href="{% static 'css/owl.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'css/jquery.js' %}" id="jquery-core-js"></script>
+<link rel="https://api.w.org/" href="https://www.cheatsheet.fr/wp-json/"><link rel="alternate" type="application/json" href="https://www.cheatsheet.fr/wp-json/wp/v2/posts/26"><link rel="next" title="Prévisualiser du markdown dans Notepad++" href="https://www.cheatsheet.fr/2019/09/11/previsualiser-du-markdown-dans-notepad/">
+<link rel="canonical" href="https://www.cheatsheet.fr/2019/09/11/markdown-cheat-sheet/">
+<link rel="shortlink" href="https://www.cheatsheet.fr/?p=26">
+<link rel="alternate" type="application/json+oembed" href="https://www.cheatsheet.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cheatsheet.fr%2F2019%2F09%2F11%2Fmarkdown-cheat-sheet%2F">
+<link rel="stylesheet" id="template_01-main-css" href="{% static 'css/style_002.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="Montserrat-css" href="{% static 'css/css_002.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="Titillium-css" href="{% static 'css/css.css' %}" type="text/css" media="all">
+
+<style type="text/css"></style>		<style type="text/css" id="custom-css">
+			.footer-credits {
+	visibility: hidden;
+	position: relative;
+}
+
+.footer-credits:after {
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "Disclamer : les informations présentes sur ce site ne sont pas garanties. Utilisez les à vos risques et périls...";
+}
+
+.footer {
+	padding: 25px 0;
+}
+		</style>
+		</head>
+
+<body class="post-template-default single single-post postid-26 single-format-standard group-blog has-sidebar-right">
+	<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="nav-container">
+			<nav id="site-navigation" class="main-navigation outOfSight fixed scrolled" role="navigation">
+				<div class="container nav-bar">
+					<div class="flex-row">
+						<div class="module left site-title-container">
+							<a href="https://www.cheatsheet.fr/" class="custom-logo-link"><span class="site-title">Cheat Sheet</span></a>						</div>
+						<button class="module widget-handle mobile-toggle right visible-sm visible-xs">
+							<i class="fa fa-bars"></i>
+						</button>
+						<div class="module-group right">
+							<div class="module left">
+															</div>
+							
+							<div class="module widget-handle search-widget-handle hidden-xs hidden-sm">
+								<button class="search">
+									<i class="fa fa-search"></i>
+									<span class="title">Recherche du site</span>
+								</button>
+								<div class="function">
+									<form role="search" method="get" id="searchform" class="search-form" action="https://www.cheatsheet.fr/">
+    <label class="screen-reader-text" for="s">Rechercher&nbsp;:</label>
+    <input type="text" placeholder="Saisir ici" name="s" id="s">
+    <button type="submit" class="searchsubmit"><i class="fa fa-search" aria-hidden="true"></i><span class="screen-reader-text">Rechercher</span></button>
+    </form>								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div id="content" class="main-container">
+					<div class="header-callout">
+									</div>
+		
+		<section class="content-area  pt0 ">
+			<div id="main" class="container" role="main">
+	<div class="row">
+				<div id="primary" class="col-md-8 mb-xs-24 sidebar-right">
+			<article id="post-26" class="post-content post-grid-wide post-26 post type-post status-publish format-standard has-post-thumbnail hentry category-programmation tag-markdown">
+	<header class="entry-header nolist">
+				<a href="https://www.cheatsheet.fr/2019/09/11/markdown-cheat-sheet/">
+			<img src="{% static 'css/markdown-512x350.png' %}" class="attachment-shapely-featured size-shapely-featured wp-post-image" alt="" width="512" height="350">		</a>
+
+					<span class="shapely-category">
+				<a href="https://www.cheatsheet.fr/category/programmation/">
+					Programmation				</a>
+			</span>
+					</header>
+	<div class="entry-content">
+					<h2 class="post-title entry-title">
+				<a href="https://www.cheatsheet.fr/2019/09/11/markdown-cheat-sheet/">Markdown Cheat sheet</a>
+			</h2>
+		
+		<div class="entry-meta">
+			
+		<ul class="post-meta">
+					<li><span class="posted-on"><time class="entry-date published" datetime="2019-09-11T12:06:03+02:00">11 septembre 2019</time><time class="updated" datetime="2019-12-26T14:51:14+01:00">26 décembre 2019</time></span></li>
+						</ul>
+					
+		</div>
+
+					<div class="shapely-content ">
+				
+<p>Aide mémoire sur la syntaxe à utiliser pour créer du texte formaté en markdown.</p>
+
+
+
+<span id="more-26"></span>
+
+
+
+<h2>Headers</h2>
+
+
+
+<pre class="wp-block-code"><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+Alternatively, for H1 and H2, an underline-ish style:
+Alt-H1
+======
+Alt-H2
+------</code></pre>
+
+
+
+<p> H1
+ <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h2"></a>
+H2
+ <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h3"></a>
+H3
+ <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h4"></a>
+H4
+ <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h5"></a>
+H5
+ <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h6"></a>
+H6
+ Alternatively, for H1 and H2, an underline-ish style:
+ <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#alt-h1"></a>
+Alt-H1
+ <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#alt-h2"></a>
+Alt-H2 </p>
+
+
+
+<h1>H1</h1>
+
+
+
+<h2>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h2"></a></h2>
+
+
+
+<h2>H2</h2>
+
+
+
+<h3>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h3"></a></h3>
+
+
+
+<h3>H3</h3>
+
+
+
+<h4>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h4"></a></h4>
+
+
+
+<h4>H4</h4>
+
+
+
+<h5>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h5"></a></h5>
+
+
+
+<h5>H5</h5>
+
+
+
+<h6>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#h6"></a></h6>
+
+
+
+<h6>H6</h6>
+
+
+
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+
+
+
+<h1>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#alt-h1"></a></h1>
+
+
+
+<h1>Alt-H1</h1>
+
+
+
+<h2>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#alt-h2"></a></h2>
+
+
+
+<h2>Alt-H2</h2>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Emphasis</h2>
+
+
+
+<pre class="wp-block-code"><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+</code></pre>
+
+
+
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>. <br>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>. <br>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>. <br>Strikethrough uses two tildes. <del>Scratch this.</del> </p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Lists</h2>
+
+
+
+<p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
+
+
+
+<pre class="wp-block-code"><code>1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+</code></pre>
+
+
+
+<ol><li>First ordered list item</li><li>Another item</li></ol>
+
+
+
+<ul><li>Unordered sub-list.</li></ul>
+
+
+
+<ol><li>
+Actual numbers don’t matter, just that it’s a number
+</li><li>
+Ordered sub-list
+</li><li>
+And another item.
+You can have properly indented paragraphs within list items. Notice 
+the blank line above, and the leading spaces (at least one, but we’ll 
+use three here to also align the raw Markdown).
+To have a line break without a paragraph, you will need to use two trailing spaces.<br>
+Note that this line is separate, but within the same paragraph.<br>
+(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+</li></ol>
+
+
+
+<ul><li>Unordered list can use asterisks</li><li>Or minuses</li><li>Or pluses</li></ul>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Links</h2>
+
+
+
+<p>There are two ways to create links.</p>
+
+
+
+<pre class="wp-block-code"><code>[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or &lt;http://www.example.com&gt; and sometimes 
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com</code></pre>
+
+
+
+<p><a href="https://www.google.com/">I’m an inline-style link</a><br><a href="https://www.google.com/">I’m an inline-style link with title</a> <br><a href="https://www.mozilla.org/">I’m a reference-style link</a><br><a href="https://github.com/adam-p/markdown-here/blob/master/LICENSE">I’m a relative reference to a repository file</a> <br><a href="http://slashdot.org/">You can use numbers for reference-style link definitions</a><br>Or leave it empty and use the <a href="http://www.reddit.com/">link text itself</a>. <br>URLs and URLs in angle brackets will automatically get turned into links. <a href="http://www.example.com/">http://www.example.com</a> or <a href="http://www.example.com/">http://www.example.com</a> and sometimes example.com (but not on Github, for example). <br>Some text to show that the reference links can follow later. </p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Images</h2>
+
+
+
+<pre class="wp-block-code"><code>Here's our logo (hover to see the title text):
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"</code></pre>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Code and Syntax Highlighting</h2>
+
+
+
+<p>Code blocks are part of the Markdown spec, but syntax highlighting isn’t. However, many renderers — like Github’s and <em>Markdown Here</em>
+ — support syntax highlighting. Which languages are supported and how 
+those language names should be written will vary from renderer to 
+renderer. <em>Markdown Here</em> supports highlighting for dozens of 
+languages (and not-really-languages, like diffs and HTTP headers); to 
+see the complete list, and how to write the language names, see the <a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+
+
+
+<pre class="wp-block-code"><code>Inline `code` has `back-ticks around` it.</code></pre>
+
+
+
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+
+
+
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>,
+ or are indented with four spaces. I recommend only using the fenced 
+code blocks — they’re easier and only they support syntax highlighting.</p>
+
+
+
+<pre class="wp-block-code"><code>```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+ 
+```python
+s = "Python syntax highlighting"
+print s
+```
+ 
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+```</code></pre>
+
+
+
+<pre class="wp-block-code"><code>s = "Python syntax highlighting"
+print s</code></pre>
+
+
+
+<pre class="wp-block-code"><code>var s = "JavaScript syntax highlighting";
+alert(s);</code></pre>
+
+
+
+<pre class="wp-block-code"><code>No language indicated, so no syntax highlighting in Markdown Here (varies on Github). 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Tables</h2>
+
+
+
+<p>Tables aren’t part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em>
+ supports them. They are an easy way of adding tables to your email — a
+ task that would otherwise require copy-pasting from another 
+application.</p>
+
+
+
+<pre class="wp-block-code"><code>Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3</code></pre>
+
+
+
+<p>Colons can be used to align columns.</p>
+
+
+
+<figure class="wp-block-table"><table class=" table table-hover"><thead><tr><th>Tables</th><th>Are</th><th>Cool</th></tr></thead><tbody><tr><td>col 3 is</td><td>right-aligned</td><td>$1600</td></tr><tr><td>col 2 is</td><td>centered</td><td>$12</td></tr><tr><td>zebra stripes</td><td>are neat</td><td>$1</td></tr></tbody></table></figure>
+
+
+
+<p>There must be at least 3 dashes separating each header cell. The 
+outer pipes (|) are optional, and you don’t need to make the raw 
+Markdown line up prettily. You can also use inline Markdown.</p>
+
+
+
+<figure class="wp-block-table"><table class=" table table-hover"><thead><tr><th>Markdown</th><th>Less</th><th>Pretty</th></tr></thead><tbody><tr><td><em>Still</em></td><td><code>renders</code></td><td><strong>nicely</strong></td></tr><tr><td>1</td><td>2</td><td>3</td></tr></tbody></table></figure>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Blockquotes</h2>
+
+
+
+<pre class="wp-block-code"><code>&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
+
+Quote break.
+
+&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+</code></pre>
+
+
+
+<blockquote class="wp-block-quote"><p>Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.</p></blockquote>
+
+
+
+<p>Quote break.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>This is a very long line that will still be quoted properly when it 
+wraps. Oh boy let’s keep writing to make sure this is long enough to 
+actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p></blockquote>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Inline HTML</h2>
+
+
+
+<p>You can also use raw HTML in your Markdown, and it’ll mostly work pretty well.</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+
+
+<p>   Definition list   Is something people use sometimes.   Markdown in HTML   Does *not* work **very** well. Use HTML <em>tags</em>. </p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Horizontal Rule</h2>
+
+
+
+<pre class="wp-block-code"><code>Three or more...
+---
+Hyphens
+***
+Asterisks
+___
+Underscores</code></pre>
+
+
+
+<p>Three or more…</p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<p>Hyphens</p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<p>Asterisks</p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<p>Underscores</p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>Line Breaks</h2>
+
+
+
+<p>My basic recommendation for learning how line breaks work is to 
+experiment and discover — hit &lt;Enter&gt; once (i.e., insert one 
+newline), then hit it twice (i.e., insert two newlines), see what 
+happens. You’ll soon learn to get what you want. “Markdown Toggle” is 
+your friend.</p>
+
+
+
+<p>Here are some things to try out:</p>
+
+
+
+<pre class="wp-block-code"><code>Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+</code></pre>
+
+
+
+<p>Here’s a line for us to start with.</p>
+
+
+
+<p>This line is separated from the one above by two newlines, so it will be a <em>separate paragraph</em>.</p>
+
+
+
+<p>This line is also begins a separate paragraph, but…<br>
+This line is only separated by a single newline, so it’s a separate line in the <em>same paragraph</em>.</p>
+
+
+
+<p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there’s no need to use MD’s two-space line breaks.)</p>
+
+
+
+<p></p>
+
+
+
+<hr class="wp-block-separator">
+
+
+
+<h2>YouTube Videos</h2>
+
+
+
+<p>They can’t be added directly but you can add an image with a link to the video like this:</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
+</code></pre>
+
+
+
+<p>Or, in pure Markdown, but losing the image sizing and border:</p>
+
+
+
+<pre class="wp-block-code"><code>[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+</code></pre>
+
+
+
+<p>Referencing a bug by #bugID in your git commit links it to the slip. For example #1.</p>
+
+
+
+<h3>Bonus – Collapsable content</h3>
+
+
+
+<pre class="wp-block-code"><code>## collapsible markdown?
+
+&lt;details&gt;&lt;summary&gt;CLICK ME&lt;/summary&gt;
+&lt;p&gt;
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
+
+
+<p>Source : https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</p>
+		<div class="wpulike wpulike-default "><div class="wp_ulike_general_class wp_ulike_is_not_liked"><button type="button" aria-label="Like Button" data-ulike-id="26" data-ulike-nonce="28fa5f6b0a" data-ulike-type="post" data-ulike-template="wpulike-default" data-ulike-display-likers="0" data-ulike-disable-pophover="0" class="wp_ulike_btn wp_ulike_put_image wp_post_btn_26"></button><span class="count-box">0</span>			</div></div>
+				</div>
+			</div>
+
+			<div class="shapely-next-prev row">
+			<div class="col-md-6 text-left">
+							</div>
+			<div class="col-md-6 text-right">
+				<div class="wrapper"><a href="https://www.cheatsheet.fr/2019/09/11/previsualiser-du-markdown-dans-notepad/" rel="next">Prévisualiser du markdown dans Notepad++</a> <span class="fa fa-angle-right"></span></div>			</div>
+		</div>
+
+		<div class="shapely-tags"><span class="fa fa-tags"></span><a href="https://www.cheatsheet.fr/tag/markdown/" rel="tag">markdown</a></div>
+		<div class="shapely-related-posts"><div class="row"><div class="col-lg-11 col-sm-10 col-xs-12 shapely-related-posts-title"><h3><span>Articles similaires</span></h3></div></div><div class="shapely-carousel-navigation hidden-xs"><ul class="shapely-carousel-arrows clearfix"><li><a href="#" class="shapely-owl-prev fa fa-angle-left"></a></li><li><a href="#" class="shapely-owl-next fa fa-angle-right"></a></li></ul></div><div class="owlCarousel owl-carousel owl-theme owl-loaded owl-drag" data-slider-id="26" id="owlCarousel-26" data-slider-items="3" data-slider-speed="400" data-slider-auto-play="1" data-slider-navigation="false"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 502px;"><div class="owl-item active" style="width: 248.667px; margin-right: 2px;"><div class="item"><a href="https://www.cheatsheet.fr/2019/09/11/modifier-le-footer-dun-theme-wordpress-sans-rentrer-dans-le-code/" class="related-item-thumbnail" style="background-image: url( https://www.cheatsheet.fr/storage/2019/09/WordPress_blue_logo.svg_-350x300.png )"><img src="{% static 'css/WordPress_blue_logo.png' %}" class="attachment-shapely-grid size-shapely-grid wp-post-image" alt="" loading="lazy" width="350" height="300"></a><div class="shapely-related-post-title"><a href="https://www.cheatsheet.fr/2019/09/11/modifier-le-footer-dun-theme-wordpress-sans-rentrer-dans-le-code/">Modifier le footer d’un thème…</a></div></div></div><div class="owl-item active" style="width: 248.667px; margin-right: 2px;"><div class="item"><a href="https://www.cheatsheet.fr/2019/09/11/previsualiser-du-markdown-dans-notepad/" class="related-item-thumbnail" style="background-image: url( https://www.cheatsheet.fr/storage/2019/09/image-350x300.png )"><img src="{% static 'css/image-350x300.png" class="attachment-shapely-grid size-shapely-grid wp-post-image" alt="" loading="lazy" width="350" height="300"></a><div class="shapely-related-post-title"><a href="https://www.cheatsheet.fr/2019/09/11/previsualiser-du-markdown-dans-notepad/">Prévisualiser du markdown dans Notepad++</a></div></div></div></div></div><div class="owl-nav disabled"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots disabled"></div></div></div>	</article>
+		</div>
+		
+
+<aside id="secondary" class="widget-area col-md-4" role="complementary">
+	<div id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="search-form" action="https://www.cheatsheet.fr/">
+    <label class="screen-reader-text" for="s">Rechercher&nbsp;:</label>
+    <input type="text" placeholder="Saisir ici" name="s" id="s">
+    <button type="submit" class="searchsubmit"><i class="fa fa-search" aria-hidden="true"></i><span class="screen-reader-text">Rechercher</span></button>
+    </form></div><div id="categories-2" class="widget widget_categories"><h2 class="widget-title">Catégories</h2>
+			<ul>
+					<li class="cat-item cat-item-51"><a href="https://www.cheatsheet.fr/category/android/">Android</a>
+</li>
+	<li class="cat-item cat-item-58"><a href="https://www.cheatsheet.fr/category/logiciels/calibre/">Calibre</a>
+</li>
+	<li class="cat-item cat-item-38"><a href="https://www.cheatsheet.fr/category/logiciels/excel/">Excel</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="https://www.cheatsheet.fr/category/logiciels/git/">Git</a>
+</li>
+	<li class="cat-item cat-item-65"><a href="https://www.cheatsheet.fr/category/logiciels/google-sheet/">Google Sheet</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="https://www.cheatsheet.fr/category/bi/knime/">Knime</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://www.cheatsheet.fr/category/linux/">Linux</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://www.cheatsheet.fr/category/logiciels/">Logiciels</a>
+</li>
+	<li class="cat-item cat-item-99"><a href="https://www.cheatsheet.fr/category/materiel/">Matériel</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://www.cheatsheet.fr/category/non-classe/">Non classé</a>
+</li>
+	<li class="cat-item cat-item-77"><a href="https://www.cheatsheet.fr/category/logiciels/notepad/">Notepad++</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="https://www.cheatsheet.fr/category/bi/power-bi/">Power BI</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://www.cheatsheet.fr/category/programmation/">Programmation</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="https://www.cheatsheet.fr/category/programmation/python/">Python</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://www.cheatsheet.fr/category/bi/qlik/">Qlik</a>
+</li>
+	<li class="cat-item cat-item-59"><a href="https://www.cheatsheet.fr/category/logiciels/visual-studio-code/">Visual Studio Code</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://www.cheatsheet.fr/category/windows/">Windows</a>
+</li>
+	<li class="cat-item cat-item-109"><a href="https://www.cheatsheet.fr/category/logiciels/word/">Word</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="https://www.cheatsheet.fr/category/logiciels/wordpress/">WordPress</a>
+</li>
+			</ul>
+
+			</div><div id="tag_cloud-3" class="widget widget_tag_cloud"><h2 class="widget-title">Étiquettes</h2><div class="tagcloud"><a href="https://www.cheatsheet.fr/tag/analytics/" class="tag-cloud-link tag-link-43 tag-link-position-1" style="font-size: 8pt;" aria-label="analytics (1 élément)">analytics</a>
+<a href="https://www.cheatsheet.fr/tag/android/" class="tag-cloud-link tag-link-52 tag-link-position-2" style="font-size: 8pt;" aria-label="android (1 élément)">android</a>
+<a href="https://www.cheatsheet.fr/tag/api/" class="tag-cloud-link tag-link-44 tag-link-position-3" style="font-size: 8pt;" aria-label="api (1 élément)">api</a>
+<a href="https://www.cheatsheet.fr/tag/calibre/" class="tag-cloud-link tag-link-56 tag-link-position-4" style="font-size: 8pt;" aria-label="calibre (1 élément)">calibre</a>
+<a href="https://www.cheatsheet.fr/tag/css/" class="tag-cloud-link tag-link-15 tag-link-position-5" style="font-size: 8pt;" aria-label="css (1 élément)">css</a>
+<a href="https://www.cheatsheet.fr/tag/dax/" class="tag-cloud-link tag-link-34 tag-link-position-6" style="font-size: 8pt;" aria-label="dax (1 élément)">dax</a>
+<a href="https://www.cheatsheet.fr/tag/epub/" class="tag-cloud-link tag-link-57 tag-link-position-7" style="font-size: 8pt;" aria-label="epub (1 élément)">epub</a>
+<a href="https://www.cheatsheet.fr/tag/erreur/" class="tag-cloud-link tag-link-47 tag-link-position-8" style="font-size: 8pt;" aria-label="erreur (1 élément)">erreur</a>
+<a href="https://www.cheatsheet.fr/tag/excel/" class="tag-cloud-link tag-link-29 tag-link-position-9" style="font-size: 11.876923076923pt;" aria-label="excel (2 éléments)">excel</a>
+<a href="https://www.cheatsheet.fr/tag/fichiers/" class="tag-cloud-link tag-link-30 tag-link-position-10" style="font-size: 8pt;" aria-label="fichiers (1 élément)">fichiers</a>
+<a href="https://www.cheatsheet.fr/tag/firefox/" class="tag-cloud-link tag-link-19 tag-link-position-11" style="font-size: 11.876923076923pt;" aria-label="firefox (2 éléments)">firefox</a>
+<a href="https://www.cheatsheet.fr/tag/google/" class="tag-cloud-link tag-link-42 tag-link-position-12" style="font-size: 8pt;" aria-label="google (1 élément)">google</a>
+<a href="https://www.cheatsheet.fr/tag/graphviz/" class="tag-cloud-link tag-link-48 tag-link-position-13" style="font-size: 8pt;" aria-label="Graphviz (1 élément)">Graphviz</a>
+<a href="https://www.cheatsheet.fr/tag/grep/" class="tag-cloud-link tag-link-12 tag-link-position-14" style="font-size: 8pt;" aria-label="grep (1 élément)">grep</a>
+<a href="https://www.cheatsheet.fr/tag/html/" class="tag-cloud-link tag-link-31 tag-link-position-15" style="font-size: 8pt;" aria-label="html (1 élément)">html</a>
+<a href="https://www.cheatsheet.fr/tag/knime/" class="tag-cloud-link tag-link-41 tag-link-position-16" style="font-size: 8pt;" aria-label="knime (1 élément)">knime</a>
+<a href="https://www.cheatsheet.fr/tag/kobo/" class="tag-cloud-link tag-link-54 tag-link-position-17" style="font-size: 14.461538461538pt;" aria-label="kobo (3 éléments)">kobo</a>
+<a href="https://www.cheatsheet.fr/tag/linux/" class="tag-cloud-link tag-link-11 tag-link-position-18" style="font-size: 22pt;" aria-label="linux (8 éléments)">linux</a>
+<a href="https://www.cheatsheet.fr/tag/markdown/" class="tag-cloud-link tag-link-9 tag-link-position-19" style="font-size: 11.876923076923pt;" aria-label="markdown (2 éléments)">markdown</a>
+<a href="https://www.cheatsheet.fr/tag/notepad/" class="tag-cloud-link tag-link-10 tag-link-position-20" style="font-size: 11.876923076923pt;" aria-label="notepad++ (2 éléments)">notepad++</a>
+<a href="https://www.cheatsheet.fr/tag/php/" class="tag-cloud-link tag-link-62 tag-link-position-21" style="font-size: 11.876923076923pt;" aria-label="php (2 éléments)">php</a>
+<a href="https://www.cheatsheet.fr/tag/pip/" class="tag-cloud-link tag-link-28 tag-link-position-22" style="font-size: 11.876923076923pt;" aria-label="pip (2 éléments)">pip</a>
+<a href="https://www.cheatsheet.fr/tag/pipreqs/" class="tag-cloud-link tag-link-50 tag-link-position-23" style="font-size: 8pt;" aria-label="pipreqs (1 élément)">pipreqs</a>
+<a href="https://www.cheatsheet.fr/tag/portable/" class="tag-cloud-link tag-link-20 tag-link-position-24" style="font-size: 8pt;" aria-label="portable (1 élément)">portable</a>
+<a href="https://www.cheatsheet.fr/tag/powerbi/" class="tag-cloud-link tag-link-32 tag-link-position-25" style="font-size: 8pt;" aria-label="powerbi (1 élément)">powerbi</a>
+<a href="https://www.cheatsheet.fr/tag/powerquery/" class="tag-cloud-link tag-link-33 tag-link-position-26" style="font-size: 8pt;" aria-label="powerquery (1 élément)">powerquery</a>
+<a href="https://www.cheatsheet.fr/tag/privoxy/" class="tag-cloud-link tag-link-18 tag-link-position-27" style="font-size: 8pt;" aria-label="privoxy (1 élément)">privoxy</a>
+<a href="https://www.cheatsheet.fr/tag/pygraphviz/" class="tag-cloud-link tag-link-49 tag-link-position-28" style="font-size: 8pt;" aria-label="pyGraphviz (1 élément)">pyGraphviz</a>
+<a href="https://www.cheatsheet.fr/tag/python/" class="tag-cloud-link tag-link-25 tag-link-position-29" style="font-size: 20.923076923077pt;" aria-label="python (7 éléments)">python</a>
+<a href="https://www.cheatsheet.fr/tag/qlik/" class="tag-cloud-link tag-link-22 tag-link-position-30" style="font-size: 14.461538461538pt;" aria-label="qlik (3 éléments)">qlik</a>
+<a href="https://www.cheatsheet.fr/tag/qliksense/" class="tag-cloud-link tag-link-24 tag-link-position-31" style="font-size: 14.461538461538pt;" aria-label="qliksense (3 éléments)">qliksense</a>
+<a href="https://www.cheatsheet.fr/tag/qlikview/" class="tag-cloud-link tag-link-23 tag-link-position-32" style="font-size: 11.876923076923pt;" aria-label="qlikview (2 éléments)">qlikview</a>
+<a href="https://www.cheatsheet.fr/tag/sortie/" class="tag-cloud-link tag-link-46 tag-link-position-33" style="font-size: 8pt;" aria-label="sortie (1 élément)">sortie</a>
+<a href="https://www.cheatsheet.fr/tag/sqlite/" class="tag-cloud-link tag-link-55 tag-link-position-34" style="font-size: 8pt;" aria-label="sqlite (1 élément)">sqlite</a>
+<a href="https://www.cheatsheet.fr/tag/sync/" class="tag-cloud-link tag-link-53 tag-link-position-35" style="font-size: 8pt;" aria-label="sync (1 élément)">sync</a>
+<a href="https://www.cheatsheet.fr/tag/tmux/" class="tag-cloud-link tag-link-45 tag-link-position-36" style="font-size: 8pt;" aria-label="tmux (1 élément)">tmux</a>
+<a href="https://www.cheatsheet.fr/tag/tor/" class="tag-cloud-link tag-link-17 tag-link-position-37" style="font-size: 8pt;" aria-label="tor (1 élément)">tor</a>
+<a href="https://www.cheatsheet.fr/tag/venv/" class="tag-cloud-link tag-link-27 tag-link-position-38" style="font-size: 11.876923076923pt;" aria-label="venv (2 éléments)">venv</a>
+<a href="https://www.cheatsheet.fr/tag/vim/" class="tag-cloud-link tag-link-16 tag-link-position-39" style="font-size: 8pt;" aria-label="vim (1 élément)">vim</a>
+<a href="https://www.cheatsheet.fr/tag/virtualenv/" class="tag-cloud-link tag-link-26 tag-link-position-40" style="font-size: 11.876923076923pt;" aria-label="virtualenv (2 éléments)">virtualenv</a>
+<a href="https://www.cheatsheet.fr/tag/visual-studio-code/" class="tag-cloud-link tag-link-61 tag-link-position-41" style="font-size: 8pt;" aria-label="visual studio code (1 élément)">visual studio code</a>
+<a href="https://www.cheatsheet.fr/tag/vscode/" class="tag-cloud-link tag-link-60 tag-link-position-42" style="font-size: 8pt;" aria-label="vscode (1 élément)">vscode</a>
+<a href="https://www.cheatsheet.fr/tag/windows/" class="tag-cloud-link tag-link-21 tag-link-position-43" style="font-size: 22pt;" aria-label="windows (8 éléments)">windows</a>
+<a href="https://www.cheatsheet.fr/tag/wordpress/" class="tag-cloud-link tag-link-14 tag-link-position-44" style="font-size: 14.461538461538pt;" aria-label="wordpress (3 éléments)">wordpress</a>
+<a href="https://www.cheatsheet.fr/tag/xargs/" class="tag-cloud-link tag-link-13 tag-link-position-45" style="font-size: 8pt;" aria-label="xargs (1 élément)">xargs</a></div>
+</div></aside>
+	</div>
+
+</div>
+</section>
+
+<div class="footer-callout">
+	</div>
+
+<footer id="colophon" class="site-footer footer bg-dark" role="contentinfo">
+	<div class="container footer-inner">
+		<div class="row">
+			
+
+<div class="footer-widget-area">
+			<div class="col-md-3 col-sm-6 footer-widget" role="complementary">
+			<div id="tag_cloud-5" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><a href="https://www.cheatsheet.fr/tag/analytics/" class="tag-cloud-link tag-link-43 tag-link-position-1" style="font-size: 8pt;" aria-label="analytics (1 élément)">analytics</a>
+<a href="https://www.cheatsheet.fr/tag/android/" class="tag-cloud-link tag-link-52 tag-link-position-2" style="font-size: 8pt;" aria-label="android (1 élément)">android</a>
+<a href="https://www.cheatsheet.fr/tag/api/" class="tag-cloud-link tag-link-44 tag-link-position-3" style="font-size: 8pt;" aria-label="api (1 élément)">api</a>
+<a href="https://www.cheatsheet.fr/tag/calibre/" class="tag-cloud-link tag-link-56 tag-link-position-4" style="font-size: 8pt;" aria-label="calibre (1 élément)">calibre</a>
+<a href="https://www.cheatsheet.fr/tag/css/" class="tag-cloud-link tag-link-15 tag-link-position-5" style="font-size: 8pt;" aria-label="css (1 élément)">css</a>
+<a href="https://www.cheatsheet.fr/tag/dax/" class="tag-cloud-link tag-link-34 tag-link-position-6" style="font-size: 8pt;" aria-label="dax (1 élément)">dax</a>
+<a href="https://www.cheatsheet.fr/tag/epub/" class="tag-cloud-link tag-link-57 tag-link-position-7" style="font-size: 8pt;" aria-label="epub (1 élément)">epub</a>
+<a href="https://www.cheatsheet.fr/tag/erreur/" class="tag-cloud-link tag-link-47 tag-link-position-8" style="font-size: 8pt;" aria-label="erreur (1 élément)">erreur</a>
+<a href="https://www.cheatsheet.fr/tag/excel/" class="tag-cloud-link tag-link-29 tag-link-position-9" style="font-size: 11.876923076923pt;" aria-label="excel (2 éléments)">excel</a>
+<a href="https://www.cheatsheet.fr/tag/fichiers/" class="tag-cloud-link tag-link-30 tag-link-position-10" style="font-size: 8pt;" aria-label="fichiers (1 élément)">fichiers</a>
+<a href="https://www.cheatsheet.fr/tag/firefox/" class="tag-cloud-link tag-link-19 tag-link-position-11" style="font-size: 11.876923076923pt;" aria-label="firefox (2 éléments)">firefox</a>
+<a href="https://www.cheatsheet.fr/tag/google/" class="tag-cloud-link tag-link-42 tag-link-position-12" style="font-size: 8pt;" aria-label="google (1 élément)">google</a>
+<a href="https://www.cheatsheet.fr/tag/graphviz/" class="tag-cloud-link tag-link-48 tag-link-position-13" style="font-size: 8pt;" aria-label="Graphviz (1 élément)">Graphviz</a>
+<a href="https://www.cheatsheet.fr/tag/grep/" class="tag-cloud-link tag-link-12 tag-link-position-14" style="font-size: 8pt;" aria-label="grep (1 élément)">grep</a>
+<a href="https://www.cheatsheet.fr/tag/html/" class="tag-cloud-link tag-link-31 tag-link-position-15" style="font-size: 8pt;" aria-label="html (1 élément)">html</a>
+<a href="https://www.cheatsheet.fr/tag/knime/" class="tag-cloud-link tag-link-41 tag-link-position-16" style="font-size: 8pt;" aria-label="knime (1 élément)">knime</a>
+<a href="https://www.cheatsheet.fr/tag/kobo/" class="tag-cloud-link tag-link-54 tag-link-position-17" style="font-size: 14.461538461538pt;" aria-label="kobo (3 éléments)">kobo</a>
+<a href="https://www.cheatsheet.fr/tag/linux/" class="tag-cloud-link tag-link-11 tag-link-position-18" style="font-size: 22pt;" aria-label="linux (8 éléments)">linux</a>
+<a href="https://www.cheatsheet.fr/tag/markdown/" class="tag-cloud-link tag-link-9 tag-link-position-19" style="font-size: 11.876923076923pt;" aria-label="markdown (2 éléments)">markdown</a>
+<a href="https://www.cheatsheet.fr/tag/notepad/" class="tag-cloud-link tag-link-10 tag-link-position-20" style="font-size: 11.876923076923pt;" aria-label="notepad++ (2 éléments)">notepad++</a>
+<a href="https://www.cheatsheet.fr/tag/php/" class="tag-cloud-link tag-link-62 tag-link-position-21" style="font-size: 11.876923076923pt;" aria-label="php (2 éléments)">php</a>
+<a href="https://www.cheatsheet.fr/tag/pip/" class="tag-cloud-link tag-link-28 tag-link-position-22" style="font-size: 11.876923076923pt;" aria-label="pip (2 éléments)">pip</a>
+<a href="https://www.cheatsheet.fr/tag/pipreqs/" class="tag-cloud-link tag-link-50 tag-link-position-23" style="font-size: 8pt;" aria-label="pipreqs (1 élément)">pipreqs</a>
+<a href="https://www.cheatsheet.fr/tag/portable/" class="tag-cloud-link tag-link-20 tag-link-position-24" style="font-size: 8pt;" aria-label="portable (1 élément)">portable</a>
+<a href="https://www.cheatsheet.fr/tag/powerbi/" class="tag-cloud-link tag-link-32 tag-link-position-25" style="font-size: 8pt;" aria-label="powerbi (1 élément)">powerbi</a>
+<a href="https://www.cheatsheet.fr/tag/powerquery/" class="tag-cloud-link tag-link-33 tag-link-position-26" style="font-size: 8pt;" aria-label="powerquery (1 élément)">powerquery</a>
+<a href="https://www.cheatsheet.fr/tag/privoxy/" class="tag-cloud-link tag-link-18 tag-link-position-27" style="font-size: 8pt;" aria-label="privoxy (1 élément)">privoxy</a>
+<a href="https://www.cheatsheet.fr/tag/pygraphviz/" class="tag-cloud-link tag-link-49 tag-link-position-28" style="font-size: 8pt;" aria-label="pyGraphviz (1 élément)">pyGraphviz</a>
+<a href="https://www.cheatsheet.fr/tag/python/" class="tag-cloud-link tag-link-25 tag-link-position-29" style="font-size: 20.923076923077pt;" aria-label="python (7 éléments)">python</a>
+<a href="https://www.cheatsheet.fr/tag/qlik/" class="tag-cloud-link tag-link-22 tag-link-position-30" style="font-size: 14.461538461538pt;" aria-label="qlik (3 éléments)">qlik</a>
+<a href="https://www.cheatsheet.fr/tag/qliksense/" class="tag-cloud-link tag-link-24 tag-link-position-31" style="font-size: 14.461538461538pt;" aria-label="qliksense (3 éléments)">qliksense</a>
+<a href="https://www.cheatsheet.fr/tag/qlikview/" class="tag-cloud-link tag-link-23 tag-link-position-32" style="font-size: 11.876923076923pt;" aria-label="qlikview (2 éléments)">qlikview</a>
+<a href="https://www.cheatsheet.fr/tag/sortie/" class="tag-cloud-link tag-link-46 tag-link-position-33" style="font-size: 8pt;" aria-label="sortie (1 élément)">sortie</a>
+<a href="https://www.cheatsheet.fr/tag/sqlite/" class="tag-cloud-link tag-link-55 tag-link-position-34" style="font-size: 8pt;" aria-label="sqlite (1 élément)">sqlite</a>
+<a href="https://www.cheatsheet.fr/tag/sync/" class="tag-cloud-link tag-link-53 tag-link-position-35" style="font-size: 8pt;" aria-label="sync (1 élément)">sync</a>
+<a href="https://www.cheatsheet.fr/tag/tmux/" class="tag-cloud-link tag-link-45 tag-link-position-36" style="font-size: 8pt;" aria-label="tmux (1 élément)">tmux</a>
+<a href="https://www.cheatsheet.fr/tag/tor/" class="tag-cloud-link tag-link-17 tag-link-position-37" style="font-size: 8pt;" aria-label="tor (1 élément)">tor</a>
+<a href="https://www.cheatsheet.fr/tag/venv/" class="tag-cloud-link tag-link-27 tag-link-position-38" style="font-size: 11.876923076923pt;" aria-label="venv (2 éléments)">venv</a>
+<a href="https://www.cheatsheet.fr/tag/vim/" class="tag-cloud-link tag-link-16 tag-link-position-39" style="font-size: 8pt;" aria-label="vim (1 élément)">vim</a>
+<a href="https://www.cheatsheet.fr/tag/virtualenv/" class="tag-cloud-link tag-link-26 tag-link-position-40" style="font-size: 11.876923076923pt;" aria-label="virtualenv (2 éléments)">virtualenv</a>
+<a href="https://www.cheatsheet.fr/tag/visual-studio-code/" class="tag-cloud-link tag-link-61 tag-link-position-41" style="font-size: 8pt;" aria-label="visual studio code (1 élément)">visual studio code</a>
+<a href="https://www.cheatsheet.fr/tag/vscode/" class="tag-cloud-link tag-link-60 tag-link-position-42" style="font-size: 8pt;" aria-label="vscode (1 élément)">vscode</a>
+<a href="https://www.cheatsheet.fr/tag/windows/" class="tag-cloud-link tag-link-21 tag-link-position-43" style="font-size: 22pt;" aria-label="windows (8 éléments)">windows</a>
+<a href="https://www.cheatsheet.fr/tag/wordpress/" class="tag-cloud-link tag-link-14 tag-link-position-44" style="font-size: 14.461538461538pt;" aria-label="wordpress (3 éléments)">wordpress</a>
+<a href="https://www.cheatsheet.fr/tag/xargs/" class="tag-cloud-link tag-link-13 tag-link-position-45" style="font-size: 8pt;" aria-label="xargs (1 élément)">xargs</a></div>
+</div>		</div>
+	
+	
+	
+	</div>
+		</div>
+
+		<div class="row">
+			<div class="site-info col-sm-6">
+				<div class="copyright-text">
+									</div>
+				<div class="footer-credits">
+					Thème par <a href="https://colorlib.com/" target="_blank" title="Colorlib">Colorlib</a> Propulsé par <a href="http://wordpress.org/" target="_blank" title="WordPress.org">WordPress</a>				</div>
+			</div>
+			<div class="col-sm-6 text-right">
+							</div>
+		</div>
+	</div>
+
+	<a class="btn btn-sm fade-half back-to-top inner-link" href="#top"><i class="fa fa-angle-up"></i></a>
+</footer>
+</div>
+</div>
+
+		<script type="text/javascript">
+			jQuery( document ).ready( function( $ ) {
+				if ( $( window ).width() >= 767 ) {
+					$( '.navbar-nav > li.menu-item > a' ).click( function() {
+						window.location = $( this ).attr( 'href' );
+					} );
+				}
+			} );
+		</script>
+		<script type="text/javascript" id="wp_ulike-js-extra">
+/* <![CDATA[ */
+var wp_ulike_params = {"ajax_url":"https:\/\/www.cheatsheet.fr\/custom_admin\/admin-ajax.php","notifications":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="{% static 'css/wp-ulike.js' %}" id="wp_ulike-js"></script>
+<script type="text/javascript" src="{% static 'css/skip-link-focus-fix.js' %}" id="shapely-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="{% static 'css/flexslider.js' %}" id="flexslider-js"></script>
+<script type="text/javascript" src="{% static 'css/owl.js' %}" id="owl.carousel-js"></script>
+<script type="text/javascript" src="{% static 'css/imagesloaded.js' %}" id="imagesloaded-js"></script>
+<script type="text/javascript" id="shapely-scripts-js-extra">
+/* <![CDATA[ */
+var ShapelyAdminObject = {"sticky_header":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="{% static 'css/shapely-scripts.js' %}" id="shapely-scripts-js"></script>
+<script type="text/javascript" id="kaliforms-submission-frontend-js-extra">
+/* <![CDATA[ */
+var KaliFormsObject = {"ajaxurl":"https:\/\/www.cheatsheet.fr\/custom_admin\/admin-ajax.php","ajax_nonce":"2159eccbe1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="{% static 'css/kaliforms-submissions.js' %}" id="kaliforms-submission-frontend-js"></script>
+<script type="text/javascript" src="{% static 'css/wp-embed.js' %}" id="wp-embed-js"></script>
+	<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            //$( document ).ajaxStart(function() {
+            //});
+
+			
+            for (var i = 0; i < document.forms.length; ++i) {
+                var form = document.forms[i];
+				if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="KxabiOyBSJUmYEA" value="p5Y[Paylrej_f2q" />'); }
+if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="ZSGmLUPz" value="lmNv9b0w" />'); }
+if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="_HpGIkOSU" value="ytV5ow[_I" />'); }
+if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="LsPE-vYKTuWlRdrV" value="bqLOt35PRfsFSDdY" />'); }
+            }
+
+			
+            $(document).on('submit', 'form', function () {
+				if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="KxabiOyBSJUmYEA" value="p5Y[Paylrej_f2q" />'); }
+if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="ZSGmLUPz" value="lmNv9b0w" />'); }
+if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="_HpGIkOSU" value="ytV5ow[_I" />'); }
+if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="LsPE-vYKTuWlRdrV" value="bqLOt35PRfsFSDdY" />'); }
+                return true;
+            });
+
+			
+            jQuery.ajaxSetup({
+                beforeSend: function (e, data) {
+
+                    //console.log(Object.getOwnPropertyNames(data).sort());
+                    //console.log(data.type);
+
+                    if (data.type !== 'POST') return;
+
+                    if (typeof data.data === 'object' && data.data !== null) {
+						data.data.append("KxabiOyBSJUmYEA", "p5Y[Paylrej_f2q");
+data.data.append("ZSGmLUPz", "lmNv9b0w");
+data.data.append("_HpGIkOSU", "ytV5ow[_I");
+data.data.append("LsPE-vYKTuWlRdrV", "bqLOt35PRfsFSDdY");
+                    }
+                    else {
+                        data.data =  data.data + '&KxabiOyBSJUmYEA=p5Y[Paylrej_f2q&ZSGmLUPz=lmNv9b0w&_HpGIkOSU=ytV5ow[_I&LsPE-vYKTuWlRdrV=bqLOt35PRfsFSDdY';
+                    }
+                }
+            });
+
+        });
+	</script>
+	
+
+
+</body></html>

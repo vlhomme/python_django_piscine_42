@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Ex01 : Moteur de recherche.{% endblock %}
+{% block style %}    
+    <link rel="stylesheet" type="text/css" href="{% static '/style2.css' %}">
+{% endblock %}
+{% block content %}
+{% include "nav.html" %}
+<h1>Moteur de recherche</h1>
+<ul>
+    <li>
+        <h2>
+            les blocs
+        </h2>
+        <p>
+            La partie la plus puissante – et aussi la plus complexe – du moteur de template de Django est l’héritage de template. L’héritage de mise en page vous permet de construire un squelette de “base” qui contient tous les éléments communs de votre site et qui définit des blocs que les mises en page enfant pourront surcharger.
+
+L’héritage de mise en page est plus simple à comprendre avec un exemple:
+        </p>
+        <pre >
+            {% filter force_escape|lower %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <title>{% verbatim %}{% block title %}{% endverbatim %}My amazing site{% verbatim %}{% endblock %}{% endverbatim %}</title>
+</head>
+
+<body>
+    <div id="sidebar">
+        {% verbatim %}{% block sidebar %}{% endverbatim %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+        {% verbatim %}{% endblock %}{% endverbatim %}
+    </div>
+
+    <div id="content">
+        {% verbatim %}{% block content %}{% endblock %}{% endverbatim %}
+    </div>
+</body>
+</html>
+{% endfilter %}
+        </pre>
+        <p>
+            Cette mise en page, que nous appellerons base.html, définit un simple squelette HTML qui pourra être utilisé pour une mise en page sur deux colonnes. Le boulot qui consiste à remplir les blocs vides avec du contenu appartient aux templates “enfants”.
+
+Dans cet exemple, la balise block déclare trois blocs que les templates enfants pourront remplir. Tout ce que fait la balise block est de dire au moteur de template qu’un template enfant peut surcharger ces parties du template.
+
+Un template enfant peut ressembler à ceci:
+        </p>
+        <pre>
+{% filter force_escape|lower %}
+{% verbatim %}{% extends "base.html" %}{% endverbatim %}
+
+{% verbatim %}{% block title %}{% endverbatim %}My amazing blog{% verbatim %}{% endblock %}{% endverbatim %}
+
+{% verbatim %}{% block content %}{% endverbatim %}
+{% verbatim %}{% for entry in blog_entries %}{% endverbatim %}
+    <h2>{% verbatim %}{{ entry.title }}{% endverbatim %}</h2>
+    <p>{% verbatim %}{{ entry.body }}{% endverbatim %}</p>
+{% verbatim %}{% endfor %}{% endverbatim %}
+            {% endfilter %}
+        </pre>
+        <p>
+            À ce stade, le moteur de template repérera les trois balises block de base.html et remplacera ces blocs par le contenu du template enfant. Selon la valeur de blog_entries, la sortie ressemblera à
+        </p>
+        <pre>
+            {% filter force_escape|lower %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <title>My amazing blog</title>
+</head>
+
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h2>Entry one</h2>
+        <p>This is my first entry.</p>
+
+        <h2>Entry two</h2>
+        <p>This is my second entry.</p>
+    </div>
+</body>
+            {% endfilter %}
+        </pre>
+        <p>Vous pouvez utiliser autant de niveaux d’héritage que vous le souhaitez. Une façon habituelle de procéder est l’approche trois-niveaux suivante:</p>
+<ul class="simple">
+<li>Créez un template <code class="docutils literal"><span class="pre">base.html</span></code> qui détiendra le look-and-feel principal de votre site.</li>
+<li>Créez un template <code class="docutils literal"><span class="pre">base_SECTIONNAME.html</span></code> pour chaque “section” de votre site.
+Par exemple, <code class="docutils literal"><span class="pre">base_news.html</span></code>, <code class="docutils literal"><span class="pre">base_sports.html</span></code>. Ces templates étendent tous
+<code class="docutils literal"><span class="pre">base.html</span></code> et contiennent les styles et design spécifiques à la section.</li>
+<li>Créez des templates individuels pour chaque type de page, comme un article d’actualité ou une entrée de blog. Ces templates étendront la section adéquate du template.</li>
+</ul>
+<p>Cette approche maximise la réutilisation du code et facilite l’ajout d’éléments dans les sections partagées, comme la section de navigation.</p>
+    </li>
+    <li>
+        <h2>
+            les boucles for ... in.
+        </h2>
+        <h2> La boucle for </h2><p> La boucle <code> for </code> permet de faire des <strong> itérations </strong> sur un élément, comme une chaine de caractères par exemple ou une <a href="./page-apprendre-listes-list-tableaux-tableaux-liste-array-python-cours-debutant" title="List Python"> liste </a> . </p><p> Exemple: </p><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="s2">"Bonjour toi"</span>
+            <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">lettre</span><span class="p">)</span>
+            <span class="o">...</span>
+            <span class="n">B</span>
+            <span class="n">o</span>
+            <span class="n">n</span>
+            <span class="n">j</span>
+            <span class="n">o</span>
+            <span class="n">u</span>
+            <span class="n">r</span>
+            
+            <span class="n">t</span>
+            <span class="n">o</span>
+            <span class="n">i</span>
+            </pre><h2> Range </h2><p> Il est possible de créer une boucle facilement avec <code> range </code> : </p><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
+              <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            </pre><h2> Stopper une boucle avec break </h2><p> Pour stopper immédiatement une boucle on peut utiliser le mot clé <code> break </code> : </p><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">]</span>
+                <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
+                <span class="o">...</span>     <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+                <span class="o">...</span>             <span class="nb">print</span><span class="p">(</span><span class="s2">"On stoppe la boucle"</span><span class="p">)</span>
+                <span class="o">...</span>             <span class="k">break</span>
+                <span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="o">...</span>
+                <span class="mi">1</span>
+                <span class="mi">5</span>
+                <span class="mi">10</span>
+                <span class="mi">15</span>
+                <span class="n">On</span> <span class="n">stoppe</span> <span class="n">la</span> <span class="n">boucle</span>
+                </pre>
+    </li>
+    <li>
+        <h2>
+            les structures de contrôle if.
+        </h2>
+        <p>La conditionnelle permet d’exécuter une séquence d’instruction,
+            seulement si une condition est vraie.</p>
+            <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+                <span class="n">sequence</span>
+            <span class="n">suite</span>
+            </pre></div>
+            </div>
+            <p>La condition est nécessairement une expression booléenne.</p>
+            <p>Évaluation :</p>
+            <ul class="simple">
+            <li>la condition est évaluée;</li>
+            <li>si la condition est vraie, la séquence est exécutée puis le contrôle
+            passe à la suite;</li>
+            <li>si la condition est fausse, le contrôle passe à la suite, sans
+            exécuter la séquence.</li>
+            </ul>
+            
+            <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">bonjour_quand_positif</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+                <span class="sd">""" affiche 'Bonjour !' si le paramètre est positif """</span>
+                <span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">print</span><span class="p">(</span><span class="s">'Bonjour !'</span><span class="p">)</span>
+            </pre></div>
+            </div>
+            <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bonjour_quand_positif</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="go">Bonjour !</span>
+            </pre></div>
+            </div>
+            <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bonjour_quand_positif</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+            <span class="go">Bonjour !</span>
+            </pre></div>
+            </div>
+            <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">bonjour_quand_positif</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+            </pre>
+    </li>
+    <li>
+        <h2>
+            l'affichage de variables passées par contexte.
+        </h2>
+        <h2>Rendering a context<a class="headerlink" href="#rendering-a-context" title="Permalink to this headline">¶</a></h2>
+<p>Once you have a compiled <a class="reference internal" href="#django.template.Template" title="django.template.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> object, you can render a context
+with it. You can reuse the same template to render it several times with
+different contexts.</p>
+<dl class="py class">
+<dt id="django.template.Context">
+<em class="property">class </em><code class="sig-name descname">Context</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dict_</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#django.template.Context" title="Permalink to this definition">¶</a></dt>
+<dd><p>The constructor of <code class="docutils literal notranslate"><span class="pre">django.template.Context</span></code> takes an optional argument —
+a dictionary mapping variable names to variable values.</p>
+<p>For details, see <a class="reference internal" href="#playing-with-context"><span class="std std-ref">Playing with Context objects</span></a> below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="django.template.Template.render">
+<code class="sig-prename descclassname">Template.</code><code class="sig-name descname">render</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span></em><span class="sig-paren">)</span><a class="headerlink" href="#django.template.Template.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call the <a class="reference internal" href="#django.template.Template" title="django.template.Template"><code class="xref py py-class docutils literal notranslate"><span class="pre">Template</span></code></a> object’s <code class="docutils literal notranslate"><span class="pre">render()</span></code> method with a
+<a class="reference internal" href="#django.template.Context" title="django.template.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">Context</span></code></a> to “fill” the template:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">django.template</span> <span class="kn">import</span> <span class="n">Context</span><span class="p">,</span> <span class="n">Template</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="s2">"My name is {{ my_name }}."</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">({</span><span class="s2">"my_name"</span><span class="p">:</span> <span class="s2">"Adrian"</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<span class="go">"My name is Adrian."</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">({</span><span class="s2">"my_name"</span><span class="p">:</span> <span class="s2">"Dolores"</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<span class="go">"My name is Dolores."</span>
+</pre></div>
+</div>
+</dd></dl>
+    </li>
+</ul>
+{% endblock %}
