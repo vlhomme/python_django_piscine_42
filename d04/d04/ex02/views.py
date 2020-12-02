@@ -3,10 +3,12 @@ from datetime import datetime
 import logging
 import os
 from ex02.forms import Myform
+from django.conf import settings
+
+logfilepath = getattr(settings, "LOGFILE", None)
 
 def extractLogs():
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    ffile = open(BASE_DIR + '/log/submit.log', 'r')
+    ffile = open(logfilepath, 'r')
     data = ffile.readlines()
     goodList = []
     if ('Ex02Logyolo\n' in data):
@@ -21,12 +23,11 @@ def extractLogs():
 
 # Create your views here.
 def index(request):
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     initialStuff = extractLogs()
     if (request.method == 'POST'):
         form = Myform(request.POST)
         if form.is_valid():
-            ffile = open(BASE_DIR + '/log/submit.log', 'a')
+            ffile = open(logfilepath, 'a')
             text = form.cleaned_data['text']
             now = str(datetime.now())
             markupToFindLines = 'Ex02Logyolo\n'

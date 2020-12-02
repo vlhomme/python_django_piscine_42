@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Ex03 : Fifty shades of bic.{% endblock %}
+{% block style %}    
+    <link rel="stylesheet" type="text/css" href="#">
+    <style>
+        td {
+            height: 40px;
+            width: 80px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<table>
+    <tr>
+        <td>
+            noir
+        </td>
+        <td>
+            rouge
+        </td>
+        <td>
+            bleu
+        </td>
+        <td>
+            vert
+        </td>
+    </tr>
+    {% for colors in listOfColors %}
+        <tr>
+            <td style="background-color: {{ colors.black }};">
+            </td>
+            <td style="background-color: {{ colors.red }};">
+            </td>
+            <td style="background-color: {{ colors.blue }};">
+            </td>
+            <td style="background-color: {{ colors.green }};">
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

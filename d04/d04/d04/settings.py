@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ex00',
     'ex01',
     'ex02',
+    'ex03'
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR + "/static",
 ]
+
+LOGFILE = BASE_DIR + '/log/submit.log'
 
 LOGGING = {
     'version': 1,
