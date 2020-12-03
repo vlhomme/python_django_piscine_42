@@ -1,0 +1,49 @@
+:root {
+    --bodyColor:#030321;
+    --primary: #8EE3EF;
+    --seconday: #C33C54;
+    --bluedark: #254E70;
+    --bluelessdark:#37718E;
+  }
+
+.gamepadContainer {
+    position: fixed;
+    bottom: 0;
+    height: 250px;
+    /* background-color: #C33C54; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamepadInnerBorder {
+  width: 80%;
+  height: 80%;
+  border-radius: 15px;
+  border: 1px solid var(--bluedark);
+  box-shadow:
+    inset 0 0 15px var(--bluelessdark),      /* inner white */
+    /*inset 5px 0 10px var(--seconday),   /* inner left magenta short */
+    /*inset -5px 0 10px var(--primary),  /* inner right cyan short */
+    /* inset 20px 0 300px #f0f,  inner left magenta broad */
+    /* inset -20px 0 300px #0ff, inner right cyan broad */
+    0 0 10px var(--bluedark);            /* outer white */
+    /* -5px 0 5px var(--seconday),        outer left magenta */
+    /* 5px 0 5px var(--primary);         outer right cyan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+td {
+  /* background-color: #C33C54; */
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.buttonImg {
+  max-width: 50px;
+  object-fit: contain;
+}

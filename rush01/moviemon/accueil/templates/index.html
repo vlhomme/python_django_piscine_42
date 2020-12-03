@@ -1,11 +1,8 @@
+{% extends "global/base.html" %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'accueil/accueil.css' %}">
-
-<!-- <audio src="{% static 'music/AnaCaptainslogue - Noir Et Blanc Vie.mp3' %}" autoplay="true">
-    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
-</audio> -->
-<!-- <embed loop="true" src="{% static 'music/boure.mp3' %}" hidden="true" type="video/quicktime"></embed> -->
-    
+{% block title %}Accueil{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'accueil/accueilo.css' %}">
 
 <svg viewBox="0 0 960 300">
 	<symbol id="s-text">
@@ -20,15 +17,27 @@
 		<use xlink:href="#s-text" class="text-copy"></use>
 	</g>
 </svg>
-<!-- <hr class='separator mediumWidth'> -->
+<h1>Attrapez les tous</h1>
 
-<div class='containerCentered'>
-    <div class="rainbow">
-        <div class="menuText">
-            A: new game <br>
-            B: load game
-            <br>
-            https://www.senscritique.com/liste/Films_de_monstres/1124104#page-1/
+    <div class="box">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="content">
+        <div class="containerMenu">
+            <div>
+                <div style="font-family: 'Montserrat';">A :</div>
+                new game
+            </div>
+            <div>
+                <div style="font-family: 'Montserrat';">B :</div>
+                load game
+            </div>
         </div>
+      </div>
+      
     </div>
-</div>
+
+    {% include "global/gamepad.html" %}
+    {% endblock %}

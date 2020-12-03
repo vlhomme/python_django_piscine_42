@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import json
+import random
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -120,3 +122,53 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+########################################################
+#                 MOVIEMON SPECIFICS                   #
+########################################################
+
+MATRIX_WIDTH = 15
+MATRIX_HEIGHT = 15
+STARTING_POS = (7,7)
+
+f = open(str(BASE_DIR) + "/titleList.json", "r")
+data = json.load(f)
+# print(data)
+if (MATRIX_HEIGHT * MATRIX_WIDTH <= 144):
+    SIZE = 'small'
+    NumberOfRequests = 23
+elif (MATRIX_HEIGHT * MATRIX_WIDTH <= 256):
+    SIZE = 'medium'
+    NumberOfRequests = 40
+elif (MATRIX_HEIGHT * MATRIX_WIDTH <= 400):
+    SIZE = 'big'
+    NumberOfRequests = 80
+else:
+    SIZE = 'humongous'
+    NumberOfRequests = 250
+listOfMovieMons = []
+for i in range(NumberOfRequests):
+    listOfMovieMons.append(random.choice(data))
+MOVIEMONS = list(dict.fromkeys(listOfMovieMons))
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+print('')
+print(bcolors.OKBLUE + '****    ----    *****' + bcolors.ENDC)
+print(bcolors.OKGREEN + "the map is considered " + SIZE + '. We decided therefore to have a list of ' + str(len(MOVIEMONS)) + ' potentials moviemons.' + bcolors.ENDC)
+print(bcolors.OKCYAN + str(MOVIEMONS) + bcolors.ENDC)
+print(bcolors.OKBLUE + '****    ----    *****' + bcolors.ENDC)
+print('')
