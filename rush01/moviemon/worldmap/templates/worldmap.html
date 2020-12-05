@@ -1,0 +1,39 @@
+{% extends "global/base.html" %}
+{% load static %}
+{% block title %}worldmap{% endblock %}
+{% block content %}
+{% include "global/headerTitle.html" %}
+<link rel="stylesheet" type="text/css" href="{% static 'worldmap/worldmap.css' %}">
+
+{% include "global/screenBegin.html" %}
+{% block screenContent %}
+
+<table>
+    {% for i in width %}
+    <tr>
+        {% if forloop.counter == y %}
+            {% for i in height %}
+                {% if forloop.counter == x %}
+                <td class='genericTd' style="{{ calculateSizeOfCells }}" ><div class='containerCharacter'>
+                    <div class='character' style="animation-delay: 0s"></div>
+                    <div class='character' style="animation-delay: 1s"></div>
+                    <div class='character' style="animation-delay: 2s"></div></div>
+                </td>
+                {% else %}
+                <td class='genericTd' style="{{ calculateSizeOfCells }}" ></td>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for i in height %}
+            <td class='genericTd' style="{{ calculateSizeOfCells }}" ></td>
+            {% endfor %}
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+{% include "global/screenEnd.html" %}
+<p class="niceFontDisplay">Movieballs: {{movieBalls}} | {{message}}</p>
+{% include "gamepadWorldmap.html" %}
+{% endblock %}

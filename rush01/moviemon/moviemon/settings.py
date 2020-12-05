@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 import json
 import random
+from cryptography.fernet import Fernet
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accueil',
+    'worldmap',
 ]
 
 MIDDLEWARE = [
@@ -131,9 +133,34 @@ STATICFILES_DIRS = [
 #                 MOVIEMON SPECIFICS                   #
 ########################################################
 
+GAMESTATEFILE = str(BASE_DIR) + "/gameState"
+SAVEFILEDIR = str(BASE_DIR) + "/savefiles/"
+KEYFILE = str(BASE_DIR) + "/keyfile"
+RANDOMLOGFILE = str(BASE_DIR) + "/logs.json"
+def write_key():
+    """
+    Generates a key and save it into a file
+    """
+    key = Fernet.generate_key()
+    with open(KEYFILE, "wb") as key_file:
+        key_file.write(key)
+def load_key():
+    """
+    Loads the key from the current directory named `key.key`
+    """
+    return open(KEYFILE, "rb").read()
+def encrypt(text: str, key):
+    f = Fernet(key)
+    return(f.encrypt(text.encode()))
+def decrypt(text, key):
+    f = Fernet(key)
+    return(f.decrypt(text))
+write_key()
+
 MATRIX_WIDTH = 15
 MATRIX_HEIGHT = 15
 STARTING_POS = (7,7)
+PLAYER_STRENGTH = 10
 
 f = open(str(BASE_DIR) + "/titleList.json", "r")
 data = json.load(f)

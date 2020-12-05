@@ -1,12 +1,12 @@
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'accueil/gamepad.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'globalCss/gamepad.css' %}">
 
 <div class="gamepadContainer" style="color: white">
   <div class="gamepadInnerBorder">
     <table>
       <tr>
         <td></td>
-        <td><img class='buttonImg' src="{% static 'pic/triangle haut.png' %}" alt="up"></td>
+        <td><a href="{% block up %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/triangle haut.png' %}" alt="up"></a></td>
         <td></td>
         <td></td>
         <td></td>
@@ -16,23 +16,23 @@
         <td></td>
       </tr>
       <tr>
-        <td><img class='buttonImg' src="{% static 'pic/triangle gauche.png' %}" alt="left"></td>
+        <td><a href="{% block left %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/triangle gauche.png' %}" alt="left"></a></td>
         <td></td>
-        <td><img class='buttonImg' src="{% static 'pic/triangle droite.png' %}" alt="right"></td>
-        <td></td>
-        <td></td>
+        <td><a href="{% block right %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/triangle droite.png' %}" alt="right"></a></td>
         <td></td>
         <td></td>
-        <td><img class='buttonImg' src="{% static 'pic/A.png' %}" alt="A"></td>
-        <td><img class='buttonImg' src="{% static 'pic/B.png' %}" alt="B"></td>
+        <td></td>
+        <td></td>
+        <td><a href="{% block A %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/A.png' %}" alt="A"></a></td>
+        <td><a href="{% block B %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/B.png' %}" alt="B"></a></td>
       </tr>
       <tr>
         <td></td>
-        <td><img class='buttonImg' src="{% static 'pic/triangle bas.png' %}" alt="down"></td>
+        <td><a href="{% block down %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/triangle bas.png' %}" alt="down"></a></td>
         <td></td>
-        <td><img class='buttonImg' src="{% static 'pic/START.png' %}" alt="START"></td>
+        <td><a href="{% block start %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/START.png' %}" alt="START"></a></td>
         <td></td>
-        <td><img class='buttonImg' src="{% static 'pic/SELECT.png' %}" alt="SELECT"></td></td>
+        <td><a href="{% block select %}#{% endblock %}"><img class='buttonImg' src="{% static 'pic/SELECT.png' %}" alt="SELECT"></a></td></td>
         <td></td>
         <td></td>
         <td></td>
