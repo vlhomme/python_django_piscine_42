@@ -1,0 +1,62 @@
+{% extends "global/base.html" %}
+{% load static %}
+{% block title %}Battle{% endblock %}
+{% block content %}
+{% include "global/headerTitle.html" %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'worldmap/worldmap.css' %}"> -->
+
+{% include "global/screenBegin.html" %}
+{% block screenContent %}
+
+<style>
+    .imgclass {
+  max-width: 100%;
+  max-height: 100%;
+  /* object-fit: contain; */
+}
+.container {
+  /* background-color: #C33C54; */
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  float: left;
+}
+
+.tablecontainer {
+    overflow: auto;
+}
+
+.yolo {
+    font-family: 'Montserrat', Tahoma, Verdana, sans-serif;
+    color: #C33C54;
+    margin-bottom: 5px;
+}
+
+.imgclasswithborder {
+    border: solid 2px #C33C54;
+    max-width: 92%;
+    max-height: 92%;
+}
+</style>
+<div class='yolo'>
+    A - More information
+    <br>
+    select - Back
+</div>
+    <div class='tablecontainer'>
+        {% for movie in movieList %}
+        <div class="container">
+            {% if forloop.counter0 == movieSelected %}
+                <img class="imgclasswithborder" src="{{movie}}" alt='poster'>
+            {% else %}
+                <img class="imgclass" src="{{movie}}" alt='poster'>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
+{% include "global/screenEnd.html" %}
+{% include "gamepadMoviedex.html" %}
+{% endblock %}

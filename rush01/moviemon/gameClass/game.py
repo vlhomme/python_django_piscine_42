@@ -101,6 +101,11 @@ class Game:
 
     @staticmethod
     def whatsinTheCell():
+        """
+            40% chance of finding nothing
+            30% chance of finding movieball
+            30% chance of finding moviemon
+        """
         randomRange = random.randint(0,100)
         if randomRange < 40:
             return 'nothing'
@@ -109,11 +114,33 @@ class Game:
         else:
             return 'moviemon'
 
+    def catchSucceed(self, movieStrength):
+        """
+            calculate probability of catching the moviemon based on movie strength and player strength
+            returns true if catch succeed
+        """
+        C = 50 - (float(movieStrength) * 10) + (float(self.playerStrength) * 5)
+        if C < 1:
+            C = 1
+        if C > 90:
+            C = 90
+        
+        randomblabla = random.random()
+        print('moviestrength = ' + str(movieStrength))
+        print('playerstrength = ' + str(self.playerStrength))
+        print('C = ' + str(C))
+        print ('random = ' + str(randomblabla * 100))
+        print(' sucess = ' + str(randomblabla < (C / 100)))
+        return randomblabla < (C / 100)
+
     def get_random_movie(self):
         """
             Retourne un Moviemon au hasard parmi les Moviemons non capturés.
         """
-        pass
+        if len(self.notCapturedYet) > 0:
+            return random.choice(self.notCapturedYet)
+        else:
+            return ''
 
     def load_default_settings(self):
         """ Charge les données de jeu dans l'instance de classe depuis les settings.

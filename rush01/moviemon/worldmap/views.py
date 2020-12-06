@@ -12,11 +12,12 @@ def updateData(case, game):
     if case == 'movieball':
         game.movieBalls = game.movieBalls + 1
         game.saveState()
-    if case == 'moviemon':
+
 
 # Create your views here.
 def index(request):
     message = ''
+    link = '#'
     game = gameUtils.Game.readState()
     x, y = game.position
     action = request.GET.get('action', '')
@@ -24,6 +25,13 @@ def index(request):
         case = game.whatsinTheCell()
         message = 'you found ' + case + '.'
         updateData(case, game)
+        if case == 'moviemon':
+            randommovieId = game.get_random_movie()
+            if (randommovieId == ''):
+                 message = 'you captured all the moviemons on this map.'
+            else:
+                link = '/battle/' + game.get_random_movie()
+                message = 'you found a moviemon ! Press A to try and capture him.'
     if (action == 'goUp'):
         if (y - 1 in range(game.height + 1)) and y - 1 != 0:
             y = y - 1
@@ -42,6 +50,7 @@ def index(request):
             updateposition((x, y))
     return render(request, "worldmap.html", {
         'message' : message,
+        'link' : link,
         'width' : range(game.width),
         'height' : range(game.height),
         'calculateSizeOfCells' : game.getStyleforSizeofCells(),

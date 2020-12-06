@@ -1,0 +1,9 @@
+{% extends "global/gamepad.html" %}
+{% block up %}#{% endblock %}
+{% block left %}/moviedex?action=previous{{movieSelected}}{% endblock %}
+{% block right %}/moviedex?action=next{{movieSelected}}{% endblock %}
+{% block A %}{{link}}{% endblock %}
+{% block B %}#{% endblock %}
+{% block down %}#{% endblock %}
+{% block start %}#{% endblock %}
+{% block select %}/worldmap{% endblock %}

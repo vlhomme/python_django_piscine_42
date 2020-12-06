@@ -1,0 +1,45 @@
+{% extends "global/base.html" %}
+{% load static %}
+{% block title %}Battle{% endblock %}
+{% block content %}
+{% include "global/headerTitle.html" %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'worldmap/worldmap.css' %}"> -->
+
+{% include "global/screenBegin.html" %}
+{% block screenContent %}
+
+<style>
+    .imgclass {
+  max-width: 100%;
+  max-height: 100%;
+  /* object-fit: contain; */
+}
+.container {
+  /* background-color: #C33C54; */
+  width: 220px;
+  height: 220px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.yolo {
+    font-family: 'Montserrat', Tahoma, Verdana, sans-serif;
+    color: #C33C54;
+    margin-top: 5px;
+}
+</style>
+
+<h1>{{director}} challenges you to catch his {{title}}</h1>
+<div class="container">
+    <img class="imgclass" src="{{poster}}" alt='poster'>
+</div>
+<div class='yolo'>
+    {{message}}
+</div>
+
+{% endblock %}
+{% include "global/screenEnd.html" %}
+<!-- <p class="niceFontDisplay">Movieballs: {{movieBalls}} | {{message}}</p> -->
+{% include "gamepadBattle.html" %}
+{% endblock %}
